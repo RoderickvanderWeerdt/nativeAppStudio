@@ -1,6 +1,7 @@
+//  RandomNumberGuesser - This app creates a random number and let's you guess!,
+//  when you guess a wrong number a hint will be given to finally get to the correct number!
 //
 //  ViewController.swift
-//  RandomNumberGuesser
 //
 //  Created by Roderick van der Weerdt on 04-09-15.
 //  Copyright (c) 2015 Roderick van der Weerdt. All rights reserved.
@@ -18,14 +19,14 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBOutlet var helpLabel: UILabel!
+    @IBOutlet weak var guessedNumber: UITextField!
+
 
     
     @IBAction func leftButtonPressed()  {
-        //NSLog("Button Pressed")
         if (self.view.backgroundColor == UIColor.greenColor()){
             self.view.backgroundColor = UIColor.grayColor()
         } else {
@@ -33,10 +34,8 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var guessedNumber: UITextField!
     
     @IBAction func rightButtonPressed()  {
-        //NSLog("Button Pressed")
         var guess = guessedNumber.text.toInt()
         if (guess > 0){
             var guesss = UInt32(guess!)

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F7191A97-8572-4EB9-B19B-74F54CF8595B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>RandomNumberGuesser</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>578BC6EA8CF419AA20F7B6A32D5A3D71035DC0BE</key>
 		<string>https://github.com/RoderickvanderWeerdt/nativeAppStudio.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RandomNumberGuesser/RandomNumberGuesser.xcodeproj/project.xcworkspace</string>
+	<string>RandomNumberGuesser/RandomNumberGuesser.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>578BC6EA8CF419AA20F7B6A32D5A3D71035DC0BE</key>
