@@ -9,15 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var game = TicTacToeGame(pOneChar: "X", pTwoChar: "O")  //Filler //Possibly a better way?
+    var game = TicTacToeGame(pOneChar: "X", pTwoChar: "O")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         clearBoard()
         self.game = TicTacToeGame(pOneChar: "X", pTwoChar: "O")
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
+    //The buttons representing the gameBoard.
     @IBOutlet var Tile0: UIButton!
     @IBOutlet var Tile1: UIButton!
     @IBOutlet var Tile2: UIButton!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet var Tile7: UIButton!
     @IBOutlet var Tile8: UIButton!
     
-    
+    //The universal function which is called when a button is pressed.
     func TilePressed(boardTile: Int, button: UIButton){
         if(game.isEmptyField(boardTile)){
             button.setTitle(String(game.tilePressed(boardTile)), forState: UIControlState())
@@ -42,14 +42,12 @@ class ViewController: UIViewController {
     
     func clearBoard(){
         var tileBoard = [Tile0, Tile1, Tile2, Tile3, Tile4, Tile5, Tile6, Tile7, Tile8]
-        //var tileBoardNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-        //for tile in tileBoardNumbers {
-        for tile in 0...8 {
-            tileBoard[tile].setTitle("", forState: UIControlState())
+        for tile in tileBoard {
+            tile.setTitle("", forState: UIControlState())
         }
     }
 
-    
+    //The Actions for each individual button.
     @IBAction func Tile0Pressed()  {
         TilePressed(0, button: Tile0)
     }
@@ -86,29 +84,31 @@ class ViewController: UIViewController {
         TilePressed(8, button: Tile8)
     }
     
+    //this function creates the alert message showing that a player has won.
     func gameWon(winner: Character){
         var endMessage = "Player " + String(winner) + " has won!"
         let alertController = UIAlertController(title: "Congratulations!", message: endMessage, preferredStyle: .Alert)
         
-        let OKAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction!) in
+        let newGameAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction!) in
             self.clearBoard()
             self.game = TicTacToeGame(pOneChar: "X", pTwoChar: "O")
             println("Started a new game")
         }
-        alertController.addAction(OKAction)
+        alertController.addAction(newGameAction)
         
         self.presentViewController(alertController, animated: true, completion:nil)
     }
     
+    //this function creates the alert message showing there are no possible moves left to play.
     func gameOver(){
         let alertController = UIAlertController(title: "too bad..", message: "Nobody Won", preferredStyle: .Alert)
         
-        let OKAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction!) in
+        let newGameAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction!) in
             self.clearBoard()
             self.game = TicTacToeGame(pOneChar: "X", pTwoChar: "O")
             println("Started a new game")
         }
-        alertController.addAction(OKAction)
+        alertController.addAction(newGameAction)
         
         self.presentViewController(alertController, animated: true, completion:nil)
     }
@@ -116,7 +116,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

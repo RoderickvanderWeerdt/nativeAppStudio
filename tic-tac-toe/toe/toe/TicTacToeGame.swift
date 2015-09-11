@@ -1,8 +1,7 @@
 //
 //  TicTacToeGame.swift
-//  toe
-//
-//
+// This file can be used to create a class to play the game tic-tac-toe.
+// Every initiation starts with an empty board.
 //
 // The Gameboard should be viewed as index (n) of the array board:
 // 0 1 2
