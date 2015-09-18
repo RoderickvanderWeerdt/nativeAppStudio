@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
     
     func clearBoard(){
-        var tileBoard = [Tile0, Tile1, Tile2, Tile3, Tile4, Tile5, Tile6, Tile7, Tile8]
+        let tileBoard = [Tile0, Tile1, Tile2, Tile3, Tile4, Tile5, Tile6, Tile7, Tile8]
         for tile in tileBoard {
             tile.setTitle("", forState: UIControlState())
         }
@@ -86,13 +86,13 @@ class ViewController: UIViewController {
     
     //this function creates the alert message showing that a player has won.
     func gameWon(winner: Character){
-        var endMessage = "Player " + String(winner) + " has won!"
+        let endMessage = "Player " + String(winner) + " has won!"
         let alertController = UIAlertController(title: "Congratulations!", message: endMessage, preferredStyle: .Alert)
         
-        let newGameAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction!) in
+        let newGameAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction) in
             self.clearBoard()
             self.game = TicTacToeGame(pOneChar: "X", pTwoChar: "O")
-            println("Started a new game")
+            print("Started a new game")
         }
         alertController.addAction(newGameAction)
         
@@ -103,10 +103,10 @@ class ViewController: UIViewController {
     func gameOver(){
         let alertController = UIAlertController(title: "too bad..", message: "Nobody Won", preferredStyle: .Alert)
         
-        let newGameAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction!) in
+        let newGameAction = UIAlertAction(title: "New Game", style: .Default) { (action:UIAlertAction) in
             self.clearBoard()
             self.game = TicTacToeGame(pOneChar: "X", pTwoChar: "O")
-            println("Started a new game")
+            print("Started a new game")
         }
         alertController.addAction(newGameAction)
         

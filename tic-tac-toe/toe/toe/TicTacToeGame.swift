@@ -111,15 +111,15 @@ class TicTacToeGame {
     
     //tester
     func printBoard(){
-        print(self.board[0])
-        print(self.board[1])
-        println(self.board[2])
-        print(self.board[3])
-        print(self.board[4])
-        println(self.board[5])
-        print(self.board[6])
-        print(self.board[7])
-        println(self.board[8])
+        print(self.board[0], terminator: "")
+        print(self.board[1], terminator: "")
+        print(self.board[2])
+        print(self.board[3], terminator: "")
+        print(self.board[4], terminator: "")
+        print(self.board[5])
+        print(self.board[6], terminator: "")
+        print(self.board[7], terminator: "")
+        print(self.board[8])
 
     }
     
