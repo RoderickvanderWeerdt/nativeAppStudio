@@ -9,11 +9,26 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    var madLibText: String = ""
+    var madLibbie: MadLibs = MadLibs(gameMode: 0)
+    
+    @IBOutlet weak var firstLabel: UILabel!
+    
+    @IBOutlet var gameOn: UIButton!
+    @IBOutlet var confirm: UIButton!
+    
+    @IBOutlet weak var textField: UITextField!
+
+    @IBAction func confirmPressed()  {
+        madLibbie.putInWord(textField.text!)
+        getNextWord()
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.gameOn.hidden = true
+        getNextWord()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,17 +36,21 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    ///*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.madLibbie.composeText()
         let thirdViewController = segue.destinationViewController as! ThirdViewController
-        thirdViewController.first = "hello World"
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        thirdViewController.madLibText = self.madLibbie.gameCompleteText
     }
-    //*/
+    
+    func getNextWord(){
+        if(madLibbie.currentWord < madLibbie.gameWords.count){
+            self.firstLabel.text = madLibbie.fillInWord()
+        }else{
+            self.firstLabel.text = "all done!"
+            self.gameOn.hidden = false
+            self.confirm.hidden = true
+            self.textField.hidden = true
+        }
+    }
 
 }
