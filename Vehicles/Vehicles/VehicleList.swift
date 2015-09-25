@@ -38,6 +38,6 @@ class VehicleList {
         // Sort the array by the model year
         let v = [mustang, outback, prius, harley, kawasaki, silverado, eighteenWheeler]
         
-        vehicles = v.sorted { $0.modelYear < $1.modelYear }
+        vehicles = v.sort { $0.modelYear < $1.modelYear }
     }
 }

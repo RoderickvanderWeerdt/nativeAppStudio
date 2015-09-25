@@ -165,7 +165,7 @@ class VehicleListTableViewController: UITableViewController {
   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 let vehicle = VehicleList.sharedInstance.vehicles[indexPath.row]
                 (segue.destinationViewController as! VehicleDetailViewController).detailVehicle = vehicle
             }
@@ -183,7 +183,7 @@ class VehicleListTableViewController: UITableViewController {
     }
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
         
         let vehicle = VehicleList.sharedInstance.vehicles[indexPath.row]
         cell.textLabel?.text = vehicle.vehicleTitle

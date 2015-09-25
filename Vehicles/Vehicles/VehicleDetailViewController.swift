@@ -35,7 +35,7 @@ class VehicleDetailViewController: UIViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
       if let vehicle = detailVehicle {
-        println(vehicle)
+        print(vehicle)
       }
   }
 

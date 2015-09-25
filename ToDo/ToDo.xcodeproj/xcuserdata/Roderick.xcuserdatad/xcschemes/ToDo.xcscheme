@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5DC89C5D19BE274D00A75324"
-               BuildableName = "Vehicles.app"
-               BlueprintName = "Vehicles"
-               ReferencedContainer = "container:Vehicles.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5DC89C7119BE274D00A75324"
-               BuildableName = "VehiclesTests.xctest"
-               BlueprintName = "VehiclesTests"
-               ReferencedContainer = "container:Vehicles.xcodeproj">
+               BlueprintIdentifier = "0FA3AEE51BB4546600BE75FA"
+               BuildableName = "ToDo.app"
+               BlueprintName = "ToDo"
+               ReferencedContainer = "container:ToDo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5DC89C7119BE274D00A75324"
-               BuildableName = "VehiclesTests.xctest"
-               BlueprintName = "VehiclesTests"
-               ReferencedContainer = "container:Vehicles.xcodeproj">
+               BlueprintIdentifier = "0FA3AEF91BB4546600BE75FA"
+               BuildableName = "ToDoTests.xctest"
+               BlueprintName = "ToDoTests"
+               ReferencedContainer = "container:ToDo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0FA3AF041BB4546600BE75FA"
+               BuildableName = "ToDoUITests.xctest"
+               BlueprintName = "ToDoUITests"
+               ReferencedContainer = "container:ToDo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5DC89C5D19BE274D00A75324"
-            BuildableName = "Vehicles.app"
-            BlueprintName = "Vehicles"
-            ReferencedContainer = "container:Vehicles.xcodeproj">
+            BlueprintIdentifier = "0FA3AEE51BB4546600BE75FA"
+            BuildableName = "ToDo.app"
+            BlueprintName = "ToDo"
+            ReferencedContainer = "container:ToDo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5DC89C5D19BE274D00A75324"
-            BuildableName = "Vehicles.app"
-            BlueprintName = "Vehicles"
-            ReferencedContainer = "container:Vehicles.xcodeproj">
+            BlueprintIdentifier = "0FA3AEE51BB4546600BE75FA"
+            BuildableName = "ToDo.app"
+            BlueprintName = "ToDo"
+            ReferencedContainer = "container:ToDo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5DC89C5D19BE274D00A75324"
-            BuildableName = "Vehicles.app"
-            BlueprintName = "Vehicles"
-            ReferencedContainer = "container:Vehicles.xcodeproj">
+            BlueprintIdentifier = "0FA3AEE51BB4546600BE75FA"
+            BuildableName = "ToDo.app"
+            BlueprintName = "ToDo"
+            ReferencedContainer = "container:ToDo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
