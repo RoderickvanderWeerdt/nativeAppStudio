@@ -1,6 +1,7 @@
 //
 //  ToDo.swift
-//  ToDo
+//  The class for the ToDo
+//  Also enabled to be saved to the memory of the phone
 //
 //  Created by Roderick van der Weerdt on 24-09-15.
 //  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
@@ -19,9 +20,7 @@ class ToDo: NSObject, NSCoding {
         super.init()
     }
     
-    //convenience init(title: String){
-    //    self.init(title: title, done: false)
-    //}
+    //for saving after exit
     
     // MARK: Types
     

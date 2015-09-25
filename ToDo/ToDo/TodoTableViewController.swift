@@ -1,6 +1,6 @@
 //
 //  TodoTableViewController.swift
-//  ToDo
+//  ToDo is an iOS app which enables the user to create a todolist on his iPhone.
 //
 //  Created by Roderick van der Weerdt on 24-09-15.
 //  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
@@ -15,6 +15,7 @@ class TodoTableViewController: UITableViewController {
     
     var todos = [ToDo]()
 
+    //The action for the button that creates a new ToDo
     @IBAction func addToDo(sender: AnyObject) {
         if(newToDoLabel.text != ""){
             newToDoLabel.resignFirstResponder();
@@ -32,6 +33,7 @@ class TodoTableViewController: UITableViewController {
         saveToDos()
     }
     
+    //action to remove all action which are checked.
     @IBAction func clearToDones(sender: AnyObject) {
         var i:Int = 0
         while(i < todos.count){
@@ -51,12 +53,8 @@ class TodoTableViewController: UITableViewController {
         if let savedToDos = loadToDos() {
             todos += savedToDos
         } else {
-            // Load the sample data.
             loadSampleToDos()
         }
-        //navigationItem.leftBarButtonItem = editButtonItem()
-        
-        //loadSampleToDos()
     }
     
     func loadSampleToDos() {
@@ -75,11 +73,9 @@ class TodoTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "ToDoTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ToDoTableViewCell
         
-        // Fetches the appropriate meal for the data source layout.
         let todo = todos[indexPath.row]
         
         cell.todo = todo

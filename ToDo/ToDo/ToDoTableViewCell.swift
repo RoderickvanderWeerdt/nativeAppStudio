@@ -1,6 +1,6 @@
 //
 //  ToDoTableViewCell.swift
-//  ToDo
+//  Class for the cell showing the todo in the table.
 //
 //  Created by Roderick van der Weerdt on 24-09-15.
 //  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
@@ -23,7 +23,6 @@ class ToDoTableViewCell: UITableViewCell {
             self.todo!.done = true
         }
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
