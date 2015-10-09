@@ -159,6 +159,7 @@
 		0FD9EB051B9A295800D28B4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Roderick van der Weerdt";
 				TargetAttributes = {
@@ -415,6 +416,7 @@
 				0FD9EB2E1B9A295800D28B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FD9EB2F1B9A295800D28B4E /* Build configuration list for PBXNativeTarget "RandomNumberGuesserTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +425,7 @@
 				0FD9EB311B9A295800D28B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

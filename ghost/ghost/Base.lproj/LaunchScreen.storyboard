@@ -17,26 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wXt-fV-XMh">
-                                <rect key="frame" x="50" y="87" width="500" height="200"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="madlibs.png" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-YC-KkG">
-                                        <rect key="frame" x="242" y="0.0" width="16" height="200"/>
-                                        <animations/>
-                                    </imageView>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redGhost.png" translatesAutoresizingMaskIntoConstraints="NO" id="qIJ-q1-jyq">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="5HN-yU-Ic7"/>
-                                </constraints>
-                            </stackView>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wXt-fV-XMh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="67" id="LqW-DE-gvr"/>
-                            <constraint firstItem="wXt-fV-XMh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="30" id="P7U-p4-DlN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wXt-fV-XMh" secondAttribute="trailing" constant="30" id="w4E-89-NBJ"/>
+                            <constraint firstItem="qIJ-q1-jyq" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="3QE-6i-ErN"/>
+                            <constraint firstAttribute="bottom" secondItem="qIJ-q1-jyq" secondAttribute="bottom" constant="20" symbolic="YES" id="9jJ-Xz-gnK"/>
+                            <constraint firstItem="qIJ-q1-jyq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="O3Q-kF-ffG"/>
+                            <constraint firstItem="qIJ-q1-jyq" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="sLr-Ar-9In"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -46,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="madlibs.png" width="282" height="308"/>
+        <image name="redGhost.png" width="600" height="600"/>
     </resources>
 </document>
