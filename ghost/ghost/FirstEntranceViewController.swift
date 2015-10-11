@@ -90,6 +90,7 @@ class FirstEntranceViewController: UIViewController {
             self.gameState = savedGameState
             print("gamestatefound")
             print(savedGameState.wordFragment)
+            continueGameButton.hidden = false
         }else{
             print("no game state found")
         }
