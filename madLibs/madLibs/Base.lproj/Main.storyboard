@@ -17,21 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMs-Af-nCa">
-                                <rect key="frame" x="371" y="490" width="169" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="D26-9B-Za4"/>
-                                    <constraint firstAttribute="height" constant="30" id="ENv-T0-g8e"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="GAc-70-h0C"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="4" height="4"/>
-                                <state key="normal" title="Start the Game Allready!"/>
-                                <connections>
-                                    <segue destination="TFW-3U-urd" kind="show" id="Chb-h7-Q8M"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AFu-33-4iv">
                                 <rect key="frame" x="40" y="70" width="520" height="30"/>
                                 <subviews>
@@ -46,7 +31,7 @@
                                         <animations/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="cNj-Lw-JX9"/>
+                                            <constraint firstAttribute="width" constant="40" id="2gB-53-Lx6"/>
                                         </constraints>
                                         <state key="normal" title="Send!"/>
                                         <connections>
@@ -55,34 +40,38 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="4am-Nd-xgL" secondAttribute="trailing" id="2Kh-5T-KEn"/>
-                                    <constraint firstItem="4am-Nd-xgL" firstAttribute="leading" secondItem="Ij7-wZ-do2" secondAttribute="trailing" id="R21-sp-Gdf"/>
-                                    <constraint firstItem="4am-Nd-xgL" firstAttribute="leading" secondItem="Ij7-wZ-do2" secondAttribute="trailing" id="uIu-lY-Viy"/>
-                                    <constraint firstItem="Ij7-wZ-do2" firstAttribute="leading" secondItem="AFu-33-4iv" secondAttribute="leading" id="yyl-tl-dLd"/>
-                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-Vd-fbc">
                                 <rect key="frame" x="40" y="41" width="160" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="J2s-GY-K71"/>
+                                    <constraint firstAttribute="width" constant="160" id="wcH-D7-1VF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMs-Af-nCa">
+                                <rect key="frame" x="216" y="108" width="169" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal" title="Start the Game Allready!"/>
+                                <connections>
+                                    <segue destination="TFW-3U-urd" kind="show" id="Chb-h7-Q8M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uHz-Vg-aeS" firstAttribute="top" secondItem="aMs-Af-nCa" secondAttribute="bottom" constant="80" id="510-AU-tKa"/>
-                            <constraint firstItem="AFu-33-4iv" firstAttribute="top" secondItem="7dA-Vd-fbc" secondAttribute="bottom" constant="8" id="PGd-ym-EwB"/>
-                            <constraint firstItem="aMs-Af-nCa" firstAttribute="trailing" secondItem="f5U-xj-nhf" secondAttribute="trailingMargin" constant="-40" id="Pqh-iS-hIQ"/>
-                            <constraint firstItem="AFu-33-4iv" firstAttribute="leading" secondItem="f5U-xj-nhf" secondAttribute="leadingMargin" constant="20" id="dqs-VS-tFP"/>
-                            <constraint firstItem="AFu-33-4iv" firstAttribute="top" secondItem="Naf-Cz-jmv" secondAttribute="bottom" constant="50" id="ezb-yI-eEB"/>
-                            <constraint firstItem="7dA-Vd-fbc" firstAttribute="leading" secondItem="f5U-xj-nhf" secondAttribute="leadingMargin" constant="20" id="iIx-Ly-wXf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AFu-33-4iv" secondAttribute="trailing" constant="20" id="zMx-3I-hD3"/>
+                            <constraint firstItem="AFu-33-4iv" firstAttribute="centerX" secondItem="aMs-Af-nCa" secondAttribute="centerX" id="J2q-Sb-NTe"/>
+                            <constraint firstItem="aMs-Af-nCa" firstAttribute="top" secondItem="AFu-33-4iv" secondAttribute="bottom" constant="8" symbolic="YES" id="MT3-sd-YcN"/>
+                            <constraint firstItem="aMs-Af-nCa" firstAttribute="centerX" secondItem="f5U-xj-nhf" secondAttribute="centerX" id="NyA-VE-iWn"/>
+                            <constraint firstItem="7dA-Vd-fbc" firstAttribute="leading" secondItem="AFu-33-4iv" secondAttribute="leading" id="jPg-Kk-ofp"/>
+                            <constraint firstItem="7dA-Vd-fbc" firstAttribute="top" secondItem="Naf-Cz-jmv" secondAttribute="bottom" constant="21" id="mAJ-hd-gOE"/>
+                            <constraint firstItem="AFu-33-4iv" firstAttribute="top" secondItem="7dA-Vd-fbc" secondAttribute="bottom" constant="8" symbolic="YES" id="qds-uf-hBf"/>
+                            <constraint firstItem="7dA-Vd-fbc" firstAttribute="leading" secondItem="f5U-xj-nhf" secondAttribute="leadingMargin" constant="20" id="qoD-5P-dWu"/>
                         </constraints>
                     </view>
                     <connections>

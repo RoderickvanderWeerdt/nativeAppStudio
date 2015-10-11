@@ -36,9 +36,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func rightButtonPressed()  {
-        var guess = guessedNumber.text.toInt()
+        let guess = Int(guessedNumber.text!)
         if (guess > 0){
-            var guesss = UInt32(guess!)
+            let guesss = UInt32(guess!)
             if(self.game.checkGuess(guesss)){
                 let alertController = UIAlertController(title: "Yes!", message: "You Have Won!", preferredStyle: .Alert)
                 self.presentViewController(alertController, animated: true, completion:nil)
@@ -56,8 +56,8 @@ class ViewController: UIViewController {
         } else {
             let alertController = UIAlertController(title: "NO!", message: "please enter a number!", preferredStyle: .Alert)
             
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
-                println("you have pressed OK button");
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+                print("you have pressed OK button");
             }
             alertController.addAction(OKAction)
             
