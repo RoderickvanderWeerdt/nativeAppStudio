@@ -5,7 +5,8 @@
 //  WallOfFameTableViewController.swift
 //  ghost
 //
-//
+//  WallOfFameTableViewController is a table which contains all the previous players
+//  of the game sorted by how much games they have won.
 //
 
 import UIKit
