@@ -165,7 +165,6 @@ class ViewController: UIViewController {
         winningButton.hidden = true
         
         if(gameState.finished){
-            setPlayerNames()
             setGameState()
             
             print("player1 '" + self.preferences.player1.name + "'")
@@ -173,11 +172,14 @@ class ViewController: UIViewController {
             
             self.game = Game(lexicon: self.lexicons.lexicons[self.preferences.currentLexicon], player1: self.preferences.player1, player2: self.preferences.player2)
         }else{
-            self.game = Game(gameState: self.gameState, lexicon: self.lexicons.lexicons[self.gameState.language])
+            self.preferences.player1 = self.gameState.player1
+            self.preferences.player2 = self.gameState.player2
+            self.preferences.addPlayers()
+            self.game = Game(gameState: self.gameState, lexicon: self.lexicons.lexicons[self.gameState.language], player1: self.preferences.player1, player2: self.preferences.player2)
             setWordFragment()
         }
         
-        
+        setPlayerNames()
         setButtons(game.possibilities())
         changeTurn()
     }
