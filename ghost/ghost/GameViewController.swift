@@ -1,26 +1,27 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
-
+// rvanderweerdt@hotmail.com - oktober 2015
 //
 //  ViewController.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 01-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
+//  This view contains the actual gameplay, it creates a keyboard at the bottom
+//  of the screen which can be used to play the letters, the playersturn is indicated
+//  by the names at the top, the orange name is the 'active' player.
+//  The current wordfragment is displayed in the middle of the screen, with a dot 
+//  representing the next letter.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     //from segue
     var preferences = GhostPreferences()
     var lexicons = LexiconCollection()
     
-    //for self
+    //for own use
     var game = Game()
     var gameState = GhostGameState()
 
-    
     @IBOutlet weak var aButton: UIButton!
     @IBOutlet weak var bButton: UIButton!
     @IBOutlet weak var cButton: UIButton!
@@ -151,6 +152,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var player2Label: UILabel!
     @IBOutlet weak var winningButton: UIButton!
     
+    //let's you immediately start a new game (without winners or losers).
     @IBAction func newGameButton(sender: AnyObject) {
         game.reset()
         winningButton.hidden = true
@@ -164,14 +166,10 @@ class ViewController: UIViewController {
         
         winningButton.hidden = true
         
-        if(gameState.finished){
+        if(gameState.finished){ //newgame
             setGameState()
-            
-            print("player1 '" + self.preferences.player1.name + "'")
-            print("player2 '" + self.preferences.player2.name + "'")
-            
             self.game = Game(lexicon: self.lexicons.lexicons[self.preferences.currentLexicon], player1: self.preferences.player1, player2: self.preferences.player2)
-        }else{
+        }else{                  //recovered game
             self.preferences.player1 = self.gameState.player1
             self.preferences.player2 = self.gameState.player2
             self.preferences.addPlayers()
@@ -186,21 +184,17 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    
+    //gives every available letter on the keyboard another color, so the user knows which letters are possible to play.
     func setButtons(possibilities: Array<Character>){
         let buttons = [["a", aButton],["b", bButton],["c", cButton],["d", dButton],["e", eButton],["f", fButton],["g", gButton],["h", hButton],
             ["i", iButton],["j", jButton],["k", kButton],["l", lButton],["m", mButton],["n", nButton],["o", oButton],["p", pButton],["q", qButton],
             ["r", rButton],["s", sButton], ["t", tButton], ["u", uButton],["v", vButton],["w", wButton],["x", xButton],["y", yButton],["z", zButton]]
         for button in buttons{
-            //(button[1] as! UIButton).hidden = true
             (button[1] as! UIButton).backgroundColor = UIColor.purpleColor()
             for possibility in possibilities{
                 if String(button[0]) == String(possibility){
-                    //(button[1] as! UIButton).hidden = false
                     (button[1] as! UIButton).backgroundColor = UIColor.greenColor()
                 }
             }
@@ -225,6 +219,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //prepares a new gameState to be saved (and possible loaded if the game won't be finished).
     func setGameState(){
         self.gameState.finished = false
         self.gameState.player1 = self.preferences.player1

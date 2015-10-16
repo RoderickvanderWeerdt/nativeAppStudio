@@ -1,12 +1,10 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
-
+// rvanderweerdt@hotmail.com - oktober 2015
 //
 //  OldPlayersTableViewCell.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 07-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
+//  The prototype table cell used by 'OldPlayersTableViewController.swift'.
 //
 
 import UIKit
@@ -22,18 +20,10 @@ class OldPlayersTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
-    
-    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //    let viewController = segue.destinationViewController as! MainMenuViewController
-    //    viewController.preferences.player1 = player
-    //}
     
 }

@@ -1,34 +1,34 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
-
+// rvanderweerdt@hotmail.com - oktober 2015
 //
 //  FirstEntranceViewController.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 09-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
-//
+//  This is where the app starts, and the lexicons are read from the file the first time the
+//  app is started. Every next the lexicons will have been saved to the memory so they can
+//  be loaded.
 
 import UIKit
 
 class FirstEntranceViewController: UIViewController {
-    //from start
+    //for segue
     var preferences = GhostPreferences()
     var lexicons = LexiconCollection()
-    var done = false
     
     var gameState = GhostGameState()
+    var done = false
 
-    
+    //textlabels for introduction
     @IBOutlet weak var introLabel1: UILabel!
     @IBOutlet weak var introLabel2: UILabel!
     
+    //handling for the 'load dutch lexicon'-button
     @IBOutlet weak var loadDutchActivity: UIActivityIndicatorView!
     @IBOutlet weak var loadDutchButton: UIButton!
     @IBAction func loadDutchButton(sender: AnyObject) {
         loadDutchActivity.hidden = false
         loadDutchActivity.startAnimating()
-        self.lexicons.loadDutchLexicon()//self.lexicons.loadTest1Lexicon()//
+        self.lexicons.loadDutchLexicon()
         saveLexicons()
         loadDutchActivity.stopAnimating()
         hideDutchLayOut()
@@ -39,12 +39,13 @@ class FirstEntranceViewController: UIViewController {
         }
     }
     
+    //handling for the 'load english lexicon'-button
     @IBOutlet weak var loadEnglishActivity: UIActivityIndicatorView!
     @IBOutlet weak var loadEnglishButton: UIButton!
     @IBAction func loadEnglishButton(sender: AnyObject) {
         loadEnglishActivity.hidden = false
         loadEnglishActivity.startAnimating()
-        self.lexicons.loadEnglishLexicon()//self.lexicons.loadTest2Lexicon()//
+        self.lexicons.loadEnglishLexicon()
         saveLexicons()
         loadEnglishActivity.stopAnimating()
         hideEnglishLayOut()
@@ -54,6 +55,7 @@ class FirstEntranceViewController: UIViewController {
             self.done = true
         }
     }
+    
     
     @IBOutlet weak var startButton: UIButton!
     @IBAction func startButton(sender: AnyObject) {
@@ -81,16 +83,17 @@ class FirstEntranceViewController: UIViewController {
         }else{
             print("no lexicons loaded")
             firstEncounterLayOut()
-            //self.lexicons.loadTest1Lexicon()
-            //self.lexicons.loadTest2Lexicon()
-            //saveLexicons()
         }
         
         if let savedGameState = loadGameState(){
             self.gameState = savedGameState
             print("gamestatefound")
             print(savedGameState.wordFragment)
-            continueGameButton.hidden = false
+            if(self.gameState.finished){
+                self.continueGameButton.hidden = true
+            }else if(self.gameState.wordFragment != ""){
+                self.continueGameButton.hidden = false
+            }
         }else{
             print("no game state found")
         }
@@ -119,11 +122,7 @@ class FirstEntranceViewController: UIViewController {
         
         startButton.hidden = false
         
-        if(!self.gameState.finished){
-            continueGameButton.hidden = false
-        }else{
-            continueGameButton.hidden = true
-        }
+        continueGameButton.hidden = true
 
     }
     
@@ -155,7 +154,6 @@ class FirstEntranceViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: NSCoding
@@ -195,7 +193,7 @@ class FirstEntranceViewController: UIViewController {
             viewController.lexicons = self.lexicons
             viewController.preferences = self.preferences
         }else if(segue.identifier == "ShowGameSegue"){
-            let viewController = segue.destinationViewController as! ViewController
+            let viewController = segue.destinationViewController as! GameViewController
             viewController.lexicons = self.lexicons
             viewController.preferences = self.preferences
             viewController.gameState = self.gameState

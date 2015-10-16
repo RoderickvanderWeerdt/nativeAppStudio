@@ -1,15 +1,13 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
-
+// rvanderweerdt@hotmail.com - oktober 2015
 //
 //  Game.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 01-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
-//
-
-//player1 always starts.
+//  This is the class in which the game of ghost takes place. It takes a lexicon
+//  which it uses to create a word (through the use of a wordFragment) which it will
+//  do until the wordFragment consists of a whole word, which finishes the game.
+//  player1 always starts.
 
 import UIKit
 
@@ -33,8 +31,8 @@ class Game: NSObject{
         self.init(lexicon: lexicon, player1: player1, player2: player2, wordFragment: "")
     }
     
-    convenience init(gameState: GhostGameState, lexicon: LexiconTree){
-        self.init(lexicon: lexicon, player1: gameState.player1, player2: gameState.player2, wordFragment: gameState.wordFragment)
+    convenience init(gameState: GhostGameState, lexicon: LexiconTree, player1: Player, player2: Player){
+        self.init(lexicon: lexicon, player1: player1, player2: player2, wordFragment: gameState.wordFragment)
         for letter in self.wordFragment.characters{
             lexicon.moveGameNode(letter)
         }
@@ -63,7 +61,7 @@ class Game: NSObject{
     
     //this method returns a boolean indicating which player is up for guessing.
     //true for player1, false for player2
-    func player1Turn()->Bool{    //turn()
+    func player1Turn()->Bool{
         if(wordFragment.characters.count % 2 == 0){ //if even number player1turn
             return true
         }else{
@@ -81,7 +79,6 @@ class Game: NSObject{
     
     //this method returns a boolean indicating if the game has ended.
     func ended()->Bool{
-        //if(self.lexicon.currentGameNode.returnNextNodes()[0] == "."){
         if(self.lexicon.currentGameNode.hasNextNodeWithLetter(".") && (self.wordFragment.characters.count > 3)){
             return true
         }else{

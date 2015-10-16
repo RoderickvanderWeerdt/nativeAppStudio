@@ -1,12 +1,13 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
+// rvanderweerdt@hotmail.com - oktober 2015
 
 //
 //  GhostGameState.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 10-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
+//  GhostGameState is used to save the state of the current game incase the game is 
+//  ended prematurely. permitting the user to continue the game when the app is started
+//  again.
 //
 
 import Foundation

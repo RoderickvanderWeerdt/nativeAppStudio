@@ -1,12 +1,12 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
+// rvanderweerdt@hotmail.com - oktober 2015
 
 //
 //  Player.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 04-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
+//  Player is a class used to represent a player in the game of ghost.
+//  Used to keep track of the wins of the player and the name.
 //
 
 import Foundation

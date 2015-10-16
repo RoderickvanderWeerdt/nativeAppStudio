@@ -1,12 +1,11 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
-
+// rvanderweerdt@hotmail.com - oktober 2015
 //
 //  OldPlayersTableViewController.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 04-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
+//  OldPlayersTableViewController is a table which contains all the previous players
+//  of the game. A player can be selected to use in a new game.
 //
 
 import UIKit
@@ -21,12 +20,10 @@ class OldPlayersTableViewController: UITableViewController {
     override func viewDidLoad() {
         sortPlayersByName()
         super.viewDidLoad()
-        //preferences.players
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int{
@@ -42,7 +39,6 @@ class OldPlayersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! OldPlayersTableViewCell
         
         let player = self.preferences.players[indexPath.row]
-        
         cell.player = player
         cell.playerNameLabel.text = player.name
         if(player.wins == 1){
@@ -54,26 +50,26 @@ class OldPlayersTableViewController: UITableViewController {
         return cell
     }
     
-    
     func sortPlayersByName(){
         self.preferences.players.sortInPlace({ $0.name < $1.name })
     }
     
-
-    
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let viewController = segue.destinationViewController as! MainMenuViewController
-        print((sender?.player!!.name)!)
-        if player == "player1"{
-            self.preferences.player1 = (sender?.player!)!
-        }else if player == "player2"{
-            self.preferences.player2 = (sender?.player!)!
+        if segue.identifier == "ShowMainMenu" {
+            print((sender?.player!!.name)!)
+            if player == "player1"{
+                self.preferences.player1 = (sender?.player!)!
+            }else if player == "player2"{
+                self.preferences.player2 = (sender?.player!)!
+            }
+            self.savePreferences()
+            viewController.lexicons = self.lexicons
+            viewController.preferences = self.preferences
+        }else if segue.identifier == "returnToMainMenuSegue"{
+            viewController.lexicons = self.lexicons
+            viewController.preferences = self.preferences
         }
-        self.savePreferences()
-        viewController.lexicons = self.lexicons
-        viewController.preferences = self.preferences
-        
     }
     
     func savePreferences() {

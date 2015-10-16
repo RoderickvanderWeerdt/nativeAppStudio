@@ -7,23 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F2CD0D01BBF1B7900CCFED5 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F2CD0CF1BBF1B7900CCFED5 /* test.txt */; settings = {ASSET_TAGS = (); }; };
-		0F2CD0D41BBF244300CCFED5 /* dutch_kopie.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F2CD0D31BBF244300CCFED5 /* dutch_kopie.txt */; settings = {ASSET_TAGS = (); }; };
-		0F551A0B1BC15DD9006660F9 /* lexicon_dutch.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F551A091BC15DD9006660F9 /* lexicon_dutch.txt */; settings = {ASSET_TAGS = (); }; };
-		0F551A0C1BC15DD9006660F9 /* lexicon_english.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F551A0A1BC15DD9006660F9 /* lexicon_english.txt */; settings = {ASSET_TAGS = (); }; };
-		0F551A0E1BC16D4B006660F9 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A0D1BC16D4B006660F9 /* PreferencesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F551A101BC16D63006660F9 /* GhostPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A0F1BC16D63006660F9 /* GhostPreferences.swift */; settings = {ASSET_TAGS = (); }; };
 		0F551A121BC16D83006660F9 /* GameWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A111BC16D83006660F9 /* GameWonViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F551A141BC16DB5006660F9 /* WallOfFameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A131BC16DB5006660F9 /* WallOfFameTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0F551A161BC16DD9006660F9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A151BC16DD9006660F9 /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F551A181BC16E09006660F9 /* OldPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A171BC16E09006660F9 /* OldPlayersTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F551A1A1BC16E1D006660F9 /* HowToGhostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A191BC16E1D006660F9 /* HowToGhostViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F551A1C1BC16E2A006660F9 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F551A1B1BC16E2A006660F9 /* MainMenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0F6D30191BC83D5D00BE79AF /* redGhost.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F6D30181BC83D5D00BE79AF /* redGhost.png */; settings = {ASSET_TAGS = (); }; };
 		0F6D301D1BC85D6400BE79AF /* FirstEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D301C1BC85D6400BE79AF /* FirstEntranceViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F6D301F1BC8767400BE79AF /* GhostGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D301E1BC8767400BE79AF /* GhostGameState.swift */; settings = {ASSET_TAGS = (); }; };
+		0F6E746A1BD1967100638902 /* lexicon_data in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E74691BD1967100638902 /* lexicon_data */; settings = {ASSET_TAGS = (); }; };
+		0F6E746C1BD196DC00638902 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E746B1BD196DC00638902 /* images */; settings = {ASSET_TAGS = (); }; };
 		0F7D751F1BBDAF62005FC6B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D751E1BBDAF62005FC6B0 /* AppDelegate.swift */; };
-		0F7D75211BBDAF62005FC6B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D75201BBDAF62005FC6B0 /* ViewController.swift */; };
+		0F7D75211BBDAF62005FC6B0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D75201BBDAF62005FC6B0 /* GameViewController.swift */; };
 		0F7D75241BBDAF62005FC6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D75221BBDAF62005FC6B0 /* Main.storyboard */; };
 		0F7D75261BBDAF62005FC6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D75251BBDAF62005FC6B0 /* Assets.xcassets */; };
 		0F7D75291BBDAF62005FC6B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D75271BBDAF62005FC6B0 /* LaunchScreen.storyboard */; };
@@ -55,24 +50,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F2CD0CF1BBF1B7900CCFED5 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
-		0F2CD0D31BBF244300CCFED5 /* dutch_kopie.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dutch_kopie.txt; sourceTree = "<group>"; };
-		0F551A091BC15DD9006660F9 /* lexicon_dutch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lexicon_dutch.txt; path = "../../../../../../../Downloads/Woordenlijsten Ghost/lexicon_dutch.txt"; sourceTree = "<group>"; };
-		0F551A0A1BC15DD9006660F9 /* lexicon_english.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lexicon_english.txt; path = "../../../../../../../Downloads/Woordenlijsten Ghost/lexicon_english.txt"; sourceTree = "<group>"; };
-		0F551A0D1BC16D4B006660F9 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		0F551A0F1BC16D63006660F9 /* GhostPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostPreferences.swift; sourceTree = "<group>"; };
 		0F551A111BC16D83006660F9 /* GameWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameWonViewController.swift; sourceTree = "<group>"; };
 		0F551A131BC16DB5006660F9 /* WallOfFameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallOfFameTableViewController.swift; sourceTree = "<group>"; };
-		0F551A151BC16DD9006660F9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		0F551A171BC16E09006660F9 /* OldPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldPlayersTableViewController.swift; sourceTree = "<group>"; };
 		0F551A191BC16E1D006660F9 /* HowToGhostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToGhostViewController.swift; sourceTree = "<group>"; };
 		0F551A1B1BC16E2A006660F9 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		0F6D30181BC83D5D00BE79AF /* redGhost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redGhost.png; path = ../../../../../../../Desktop/redGhost.png; sourceTree = "<group>"; };
 		0F6D301C1BC85D6400BE79AF /* FirstEntranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstEntranceViewController.swift; sourceTree = "<group>"; };
 		0F6D301E1BC8767400BE79AF /* GhostGameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostGameState.swift; sourceTree = "<group>"; };
+		0F6E74691BD1967100638902 /* lexicon_data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lexicon_data; sourceTree = "<group>"; };
+		0F6E746B1BD196DC00638902 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		0F7D751B1BBDAF62005FC6B0 /* ghost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ghost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7D751E1BBDAF62005FC6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F7D75201BBDAF62005FC6B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F7D75201BBDAF62005FC6B0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0F7D75231BBDAF62005FC6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F7D75251BBDAF62005FC6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F7D75281BBDAF62005FC6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,27 +129,22 @@
 		0F7D751D1BBDAF62005FC6B0 /* ghost */ = {
 			isa = PBXGroup;
 			children = (
+				0F6E746B1BD196DC00638902 /* images */,
+				0F6E74691BD1967100638902 /* lexicon_data */,
 				0F7D751E1BBDAF62005FC6B0 /* AppDelegate.swift */,
-				0F7D75201BBDAF62005FC6B0 /* ViewController.swift */,
-				0FEEE0161BC5DCD200F13E9A /* LexiconCollection.swift */,
-				0FCD1D091BC08E070065108D /* LexiconTree.swift */,
-				0FCD1D0D1BC08E540065108D /* LexiconNode.swift */,
-				0F551A0D1BC16D4B006660F9 /* PreferencesViewController.swift */,
-				0F551A0F1BC16D63006660F9 /* GhostPreferences.swift */,
+				0F6D301C1BC85D6400BE79AF /* FirstEntranceViewController.swift */,
+				0F551A1B1BC16E2A006660F9 /* MainMenuViewController.swift */,
+				0F7D75201BBDAF62005FC6B0 /* GameViewController.swift */,
 				0F551A111BC16D83006660F9 /* GameWonViewController.swift */,
 				0F551A131BC16DB5006660F9 /* WallOfFameTableViewController.swift */,
-				0F551A151BC16DD9006660F9 /* OptionsViewController.swift */,
 				0F551A171BC16E09006660F9 /* OldPlayersTableViewController.swift */,
 				0FEEE0141BC5C0CA00F13E9A /* OldPlayersTableViewCell.swift */,
 				0F551A191BC16E1D006660F9 /* HowToGhostViewController.swift */,
-				0F551A1B1BC16E2A006660F9 /* MainMenuViewController.swift */,
-				0F6D301C1BC85D6400BE79AF /* FirstEntranceViewController.swift */,
-				0F2CD0CF1BBF1B7900CCFED5 /* test.txt */,
-				0F2CD0D31BBF244300CCFED5 /* dutch_kopie.txt */,
-				0F551A091BC15DD9006660F9 /* lexicon_dutch.txt */,
-				0F551A0A1BC15DD9006660F9 /* lexicon_english.txt */,
-				0F6D30181BC83D5D00BE79AF /* redGhost.png */,
+				0FEEE0161BC5DCD200F13E9A /* LexiconCollection.swift */,
+				0FCD1D091BC08E070065108D /* LexiconTree.swift */,
+				0FCD1D0D1BC08E540065108D /* LexiconNode.swift */,
 				0F7D754E1BBDDC12005FC6B0 /* Game.swift */,
+				0F551A0F1BC16D63006660F9 /* GhostPreferences.swift */,
 				0F6D301E1BC8767400BE79AF /* GhostGameState.swift */,
 				0FAED0D61BC135CF00E8D9CB /* Player.swift */,
 				0F7D75221BBDAF62005FC6B0 /* Main.storyboard */,
@@ -294,14 +279,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2CD0D41BBF244300CCFED5 /* dutch_kopie.txt in Resources */,
+				0F6E746C1BD196DC00638902 /* images in Resources */,
 				0F7D75291BBDAF62005FC6B0 /* LaunchScreen.storyboard in Resources */,
 				0F7D75261BBDAF62005FC6B0 /* Assets.xcassets in Resources */,
-				0F2CD0D01BBF1B7900CCFED5 /* test.txt in Resources */,
-				0F551A0B1BC15DD9006660F9 /* lexicon_dutch.txt in Resources */,
+				0F6E746A1BD1967100638902 /* lexicon_data in Resources */,
 				0F7D75241BBDAF62005FC6B0 /* Main.storyboard in Resources */,
-				0F551A0C1BC15DD9006660F9 /* lexicon_english.txt in Resources */,
-				0F6D30191BC83D5D00BE79AF /* redGhost.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,13 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F7D75211BBDAF62005FC6B0 /* ViewController.swift in Sources */,
+				0F7D75211BBDAF62005FC6B0 /* GameViewController.swift in Sources */,
 				0FEEE0171BC5DCD200F13E9A /* LexiconCollection.swift in Sources */,
 				0FCD1D0E1BC08E540065108D /* LexiconNode.swift in Sources */,
-				0F551A161BC16DD9006660F9 /* OptionsViewController.swift in Sources */,
 				0FAED0D71BC135CF00E8D9CB /* Player.swift in Sources */,
 				0FEEE0151BC5C0CA00F13E9A /* OldPlayersTableViewCell.swift in Sources */,
-				0F551A0E1BC16D4B006660F9 /* PreferencesViewController.swift in Sources */,
 				0F551A141BC16DB5006660F9 /* WallOfFameTableViewController.swift in Sources */,
 				0FCD1D0A1BC08E070065108D /* LexiconTree.swift in Sources */,
 				0F6D301F1BC8767400BE79AF /* GhostGameState.swift in Sources */,

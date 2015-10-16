@@ -1,12 +1,11 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
+// rvanderweerdt@hotmail.com - oktober 2015
 
 //
 //  WallOfFameTableViewController.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 04-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
+//
 //
 
 import UIKit
@@ -17,7 +16,6 @@ class WallOfFameTableViewController: UITableViewController {
     var lexicons = LexiconCollection()
     var showNewGameButton = false
     
-    //var player = ""
     @IBOutlet weak var startNewGameButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -61,7 +59,7 @@ class WallOfFameTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowGameSegue" {
-            let viewController = segue.destinationViewController as! ViewController
+            let viewController = segue.destinationViewController as! GameViewController
             viewController.lexicons = self.lexicons
             viewController.preferences = self.preferences
         }else if segue.identifier == "ShowMainMenuSegue"{

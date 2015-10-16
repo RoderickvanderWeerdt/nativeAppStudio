@@ -1,13 +1,15 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
-
+// rvanderweerdt@hotmail.com - oktober 2015
 //
 //  LexiconTree.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 04-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
-//
+//  LexiconTree is a trie-class, containing all the words from a lexicon. Starting at
+//  the startNode which branches out the all the possible first letters of the words 
+//  in the lexicon. This nodes then branch out with the letters that can be reached (given
+//  the starting letter etcetera. 
+//  The Class also contains a currentGameNode, a 'pointer' to the node currently used by 
+//  a game (ghost for example).
 
 import Foundation
 
@@ -20,11 +22,11 @@ class LexiconTree: NSCoder {
         self.currentGameNode = self.startNode
         super.init()
         
-        let wordArray = getWords(getText(sourcePath))
+        let wordArray = getWords(sourcePath)
         fillTree(wordArray)
     }
     
-    init(node: LexiconNode){        //for decoding
+    init(node: LexiconNode){//for decoding from a saved LexiconTree
         self.startNode = node
         self.currentGameNode = self.startNode
     }
@@ -56,33 +58,19 @@ class LexiconTree: NSCoder {
         }
     }
     
-    private func getText(sourcePath: String) -> String{
-        
-        let path = NSBundle.mainBundle().pathForResource(sourcePath, ofType: nil)
-        var fileContents: String? = nil
-        do{
-            fileContents = try String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
-            return fileContents!
-        }catch _ as NSError{
-            print("darn!, file reading error")
-            return "verdorie"
-        }
-        
-    }
-    
-    private func getWords(originalText: String)->Array<String>{
-        var wordString: Array<String> = []
-        var currentText: String = ""
-        for character in originalText.characters {
-            if(character == "\n"){
-                wordString.append(currentText)
-                currentText = ""
-            }else{
-                currentText.insert(character, atIndex: currentText.endIndex)
+    //reads the words from the .txt file and returns an array of all the words to be put in the lexicon.
+    private func getWords(sourcePath: String)->Array<String>{
+        var allWords: Array<String> = []
+        if let wordsPath = NSBundle.mainBundle().pathForResource(sourcePath, ofType: nil) {
+            do {
+                let words = try NSString(contentsOfFile: wordsPath, usedEncoding: nil)
+                allWords = words.componentsSeparatedByString("\n")
+            } catch _ {
             }
+        } else {
+            allWords = ["verdorie"]
         }
-        wordString.append(currentText)   //last word
-        return wordString
+        return allWords
     }
     
     func moveGameNode(letter: Character){       //filter (sort of)
@@ -94,10 +82,6 @@ class LexiconTree: NSCoder {
         }
     }
     
-    func count()->Int{      //sort of
-        return self.currentGameNode.nextNodes.count
-    }
-    
     func reset(){
         self.currentGameNode = self.startNode
     }
@@ -106,7 +90,6 @@ class LexiconTree: NSCoder {
     
     struct PropertyKey {
         static let startNodeKey = "startNodeKey"
-        //static let winsKey = "wins"
     }
     
     // MARK: NSCoding

@@ -1,12 +1,13 @@
 // Roderick van der Weerdt - 10680195
-// rvanderweerdt@hotmail.com
+// rvanderweerdt@hotmail.com - oktober 2015
 
 //
 //  GhostPreferences.swift
 //  ghost
 //
-//  Created by Roderick van der Weerdt on 04-10-15.
-//  Copyright © 2015 Roderick van der Weerdt. All rights reserved.
+//  GhostPreferences is used to keep track (and save) the preferences of the user.
+//  Preferences of the user include the names of the players, a list of all the 
+//  previous players and the currentLexicon being used for the game.
 //
 
 import UIKit
@@ -35,6 +36,11 @@ class GhostPreferences: NSObject, NSCoding {
         self.init(player1: Player(), player2: Player(), players: [], currentLexicon: 0)     //zero beetje hardcoded
     }
     
+    func useLexicon(language: Int){
+        self.currentLexicon = language
+        print("self.currentLexicon = " + String(self.currentLexicon))
+    }
+    
     func addPlayers(){
         var player1found = false
         var player2found = false
@@ -61,7 +67,6 @@ class GhostPreferences: NSObject, NSCoding {
     
     
     // MARK: Types
-    
     struct PropertyKey {
         static let player1Key = "player1"
         static let player2Key = "player2"
